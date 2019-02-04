@@ -2,7 +2,7 @@
 This documentation illustrates the usage of the different MACS3.Connected SDK:
 
 MACS3.Connected.Stablity.SDK\
-MACS3.Connected.Lashing.SDK
+MACS3.Connected.Lashing.SDK\
 MACS3.Connected.DangerousCargo.SDK
 
 ## Stability calculation
@@ -13,6 +13,7 @@ Install the MACS3.Connected Stability SDK from nuget.org:
 Install-Package nn
 ```
 
+Create an empty console app project:
 ```
 using Macs3.Connected.Stability.SDK;
 using Model = IO.Swagger.Model;
