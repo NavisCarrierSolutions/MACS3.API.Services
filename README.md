@@ -10,13 +10,13 @@ Our MACS3.Connected APIs are documented according to the OpenAPI specification (
 
 Our technical documentation is available at:
 
-https://api.stability.macs3.com
-https://api.lashing.macs3.com
-https://api.dago.macs3.com
+* https://api.stability.macs3.com
+* https://api.lashing.macs3.com
+* https://api.dago.macs3.com
 
 Popular generators are Swagger Codegen or SwaggerHub.
 
-## This documentation illustrates the usage of the different MACS3.Connected SDK in C# 7.1:
+## Basic usage of the different MACS3.Connected SDKs in C# 7.1:
 
 ## Stability calculation
 This snippet explains how to perform a stability calculation
