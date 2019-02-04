@@ -1,19 +1,22 @@
 # MACS3.Connected
-This documentation illustrates the usage of the different MACS3.Connected SDK:
+This documentation illustrates the usage of the different MACS3.Connected SDK in C# 7.1:
 
 * MACS3.Connected.Stability.SDK\
 * MACS3.Connected.Lashing.SDK\
 * MACS3.Connected.DangerousCargo.SDK
 
 ## Stability calculation
-This snippet explains how to perform a stability calculation in C# 7.1.
+This snippet explains how to perform a stability calculation
 
-Install the MACS3.Connected Stability SDK from nuget.org:
-```
-Install-Package nn
-```
+### Create a project
+NuGet packages can be installed into any .NET project, provided that the package supports the same target framework as the project.
 
-Create an empty console app project:
+### Add the MACS3.Connected Stability SDK from nuget.org:
+1. In Visual Studio select Tools > NuGet Package Manager > Package Manager Console menu command\
+2. Once the console opens, check that the Default project drop-down list shows the project into which you want to install the package.\
+3. Enter the command ```Install-Package nn```
+
+### Use SDK in the app:
 ```
 using Macs3.Connected.Stability.SDK;
 using Model = IO.Swagger.Model;
