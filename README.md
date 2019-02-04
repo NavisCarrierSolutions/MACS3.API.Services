@@ -20,18 +20,15 @@ Find popular generators at [Swagger Codegen](https://swagger.io/tools/swagger-co
 
 ## Sample - using MACS3.Connected SDKs with Microsoft Visual Studio and C# 7.1:
 
-## Stability calculation
-This snippet explains how to perform a stability calculation
-
-### Create a project
+### Basic stability calculation: Create a project
 MACS3.Connected SDK packages can be installed into any .NET project, provided that the package supports the same target framework as the project.
 
-### Add the MACS3.Connected Stability SDK from nuget.org:
+### Add the MACS3.Connected Stability SDK from nuget.org
 1. In Visual Studio select Tools > NuGet Package Manager > Package Manager Console menu command
 2. Once the console opens, check that the Default project drop-down list shows the project into which you want to install the package.
 3. Enter the command ```Install-Package nn```
 
-### Create an API-KEY
+### Get your API-KEY
 
 ### Use the SDK in your project:
 ```
