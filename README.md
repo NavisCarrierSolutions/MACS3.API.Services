@@ -6,7 +6,7 @@ MACS3.Connected.Lashing.SDK
 MACS3.Connected.DangerousCargo.SDK
 
 ## Stability calculation
-This snippet explains how to perform a stability calculation in C#.
+This snippet explains how to perform a stability calculation in C# 7.1.
 
 Install the MACS3.Connected Stability SDK from nuget.org:
 ```
@@ -19,22 +19,26 @@ using Model = IO.Swagger.Model;
 
 namespace Macs3.Connected.StabilityTest
 {
-    ...
-    using (var apiClient = await API2.CreateClientAsync(new ApiKeyProvider { ApiKey = "YOUR-API-KEY" }))
+    class Program
     {
-        try
+        static async Task Main(string[] args)
         {
-            Model.CalculationsParameter parameter;
-            Model.CalculationsResult result;
+            using (var apiClient = await API2.CreateClientAsync(new ApiKeyProvider { ApiKey = "YOUR-API-KEY" }))
+            {
+                try
+                {
+                    Model.CalculationsParameter parameter;
+                    Model.CalculationsResult result;
 
-            parameter = new Model.CalculationsParameter();
-            result = await apiClient.CalculateStabilityAsync("YOUR-IMO-NUMBER", parameter);
-        }
-        catch (Exception)
-        {
+                    parameter = new Model.CalculationsParameter();
+                    result = await apiClient.CalculateStabilityAsync("YOUR-IMO-NUMBER", parameter);
+                }
+                catch (Exception)
+                {
+                }
+            }
         }
     }
-    ...
 }
 ```
 
