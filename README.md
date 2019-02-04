@@ -2,8 +2,8 @@
 This documentation illustrates the usage of the different MACS3.Connected REST API
 ## Basic usage: Stability calculation
 This snippet explains how to perform a stability-calculation in C#.
-Install the package from nuget.org:
 
+Install the package from nuget.org:
 ```
 Install-Package nn
 ```
