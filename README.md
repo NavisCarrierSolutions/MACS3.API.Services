@@ -1,9 +1,9 @@
 # MACS3.Connected
 This documentation illustrates the usage of the different MACS3.Connected SDK:
 
-MACS3.Connected.Stablity.SDK\
-MACS3.Connected.Lashing.SDK\
-MACS3.Connected.DangerousCargo.SDK
+*MACS3.Connected.Stability.SDK\
+*MACS3.Connected.Lashing.SDK\
+*MACS3.Connected.DangerousCargo.SDK
 
 ## Stability calculation
 This snippet explains how to perform a stability calculation in C# 7.1.
