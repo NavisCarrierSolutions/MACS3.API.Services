@@ -29,6 +29,8 @@ MACS3.Connected SDK packages can be installed into any .NET project, provided th
 2. Once the console opens, check that the Default project drop-down list shows the project into which you want to install the package.
 3. Enter the command ```Install-Package nn```
 
+### Create an API-KEY
+
 ### Use the SDK in your project:
 ```
 using Macs3.Connected.Stability.SDK;
