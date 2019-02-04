@@ -1,7 +1,7 @@
 # MACS3.Connected
 This documentation illustrates the usage of the different MACS3.Connected REST API
-## Basic usage
-This example explains how to perform a stability-calculation in C#.
+## Basic usage: Stability calculation
+This snippet explains how to perform a stability-calculation in C#.
 Install the package from nuget.org:
 
 ```
@@ -14,6 +14,7 @@ using Model = IO.Swagger.Model;
 
 namespace Macs3.Connected.StabilityTest
 {
+    ...
     using (var apiClient = await API2.CreateClientAsync(new ApiKeyProvider { ApiKey = "YOUR-API-KEY" }))
     {
         try
@@ -22,11 +23,12 @@ namespace Macs3.Connected.StabilityTest
             Model.CalculationsResult result;
 
             parameter = new Model.CalculationsParameter();
-            result = await apiClient.CalculateStabilityAsync(imoNumber, parameter);
+            result = await apiClient.CalculateStabilityAsync("YOUR-IMO-NUMBER", parameter);
         }
         catch (Exception)
         {
         }
     }
+    ...
 }
 ```
