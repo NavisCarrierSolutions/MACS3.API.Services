@@ -24,9 +24,9 @@ namespace Macs3.Connected.StabilityTest
     {
         static async Task Main(string[] args)
         {
-            var provider = new ApiKeyProvider { ApiKey = "YOUR-API-KEY" });
+            var provider = new ApiKeyProvider { ApiKey = "YOUR-API-KEY" };
             
-            using (var apiClient = await Macs3.Connected.Stability.SDK.API2.CreateClientAsync(provider)
+            using (var apiClient = await Macs3.Connected.Stability.SDK.API2.CreateClientAsync(provider))
             {
                 try
                 {
@@ -53,6 +53,7 @@ Install the MACS3.Connected Lashing SDK from nuget.org:
 Install-Package nn
 ```
 
+Create an empty console app project:
 ```
 using Macs3.Connected.Lashing.SDK;
 using Model = IO.Swagger.Model;
@@ -63,7 +64,9 @@ namespace Macs3.Connected.LashingTest
     {
         static async Task Main(string[] args)
         {
-            using (var apiClient = await API2.CreateClientAsync(new ApiKeyProvider { ApiKey = "YOUR-API-KEY" }))
+            var provider = new ApiKeyProvider { ApiKey = "YOUR-API-KEY" };
+            
+            using (var apiClient = await Macs3.Connected.Lashing.SDK.API2.CreateClientAsync(provider))
             {
             }
         }
@@ -79,6 +82,7 @@ Install the MACS3.Connected DangerousCargo SDK from nuget.org:
 Install-Package nn
 ```
 
+Create an empty console app project:
 ```
 using Macs3.Connected.DangerousCargo.SDK;
 using Model = IO.Swagger.Model;
@@ -89,7 +93,9 @@ namespace Macs3.Connected.DangerousCargoTest
     {
         static async Task Main(string[] args)
         {
-            using (var apiClient = await API2.CreateClientAsync(new ApiKeyProvider { ApiKey = "YOUR-API-KEY" }))
+            var provider = new ApiKeyProvider { ApiKey = "YOUR-API-KEY" };
+            
+            using (var apiClient = await Macs3.Connected.DangerousCargo.SDK.API2.CreateClientAsync())
             {
             }
         }
