@@ -14,7 +14,7 @@ Our technical documentation is available at:
 * https://api.lashing.macs3.com
 * https://api.dago.macs3.com
 
-Popular generators are Swagger Codegen or SwaggerHub.
+Popular generators are [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub).
 
 ## Basic usage of the different MACS3.Connected SDKs in C# 7.1:
 
