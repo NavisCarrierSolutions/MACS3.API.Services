@@ -23,7 +23,9 @@ namespace Macs3.Connected.StabilityTest
     {
         static async Task Main(string[] args)
         {
-            using (var apiClient = await API2.CreateClientAsync(new ApiKeyProvider { ApiKey = "YOUR-API-KEY" }))
+            var provider = new ApiKeyProvider { ApiKey = "YOUR-API-KEY" });
+            
+            using (var apiClient = await Macs3.Connected.Stability.SDK.API2.CreateClientAsync(provider)
             {
                 try
                 {
