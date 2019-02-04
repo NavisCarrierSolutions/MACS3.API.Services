@@ -1,7 +1,7 @@
 # MACS3.Connected
 This documentation illustrates the usage of the different MACS3.Connected SDK:
 
-MACS3.Connected.Stablity.SDK
+MACS3.Connected.Stablity.SDK\
 MACS3.Connected.Lashing.SDK
 MACS3.Connected.DangerousCargo.SDK
 
