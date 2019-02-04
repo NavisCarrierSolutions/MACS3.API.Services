@@ -1,9 +1,22 @@
-# MACS3.Connected
-This documentation illustrates the usage of the different MACS3.Connected SDK in C# 7.1:
+# MACS3.Connected APIs
+
+We offer the following APIs to access...
 
 * MACS3.Connected.Stability.SDK
 * MACS3.Connected.Lashing.SDK
 * MACS3.Connected.DangerousCargo.SDK
+
+Our MACS3.Connected APIs are documented according to the OpenAPI specification (formerly known as Swagger) and enables technical users to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, Android and more programming languages.
+
+Our technical documentation is available at:
+
+https://api.stability.macs3.com
+https://api.lashing.macs3.com
+https://api.dago.macs3.com
+
+Popular generators are Swagger Codegen or SwaggerHub.
+
+## This documentation illustrates the usage of the different MACS3.Connected SDK in C# 7.1:
 
 ## Stability calculation
 This snippet explains how to perform a stability calculation
