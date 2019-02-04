@@ -6,7 +6,7 @@ We offer the following APIs to access...
 * MACS3.Connected.Lashing.SDK
 * MACS3.Connected.DangerousCargo.SDK
 
-Our MACS3.Connected APIs are documented according to the OpenAPI specification (formerly known as Swagger) and enables technical users to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, Android and more programming languages.
+Our MACS3.Connected APIs are documented according to the OpenAPI specification (formerly known as Swagger) and enables users to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and more programming languages.
 
 Our technical documentation is available at:
 
@@ -14,9 +14,9 @@ Our technical documentation is available at:
 * https://api.lashing.macs3.com
 * https://api.dago.macs3.com
 
-Popular generators are [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub).
+Find popular generators at [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub).
 
-## Basic usage of the different MACS3.Connected SDKs in C# 7.1:
+## Using the different MACS3.Connected SDKs with Microsoft Visual Studio and C# 7.1:
 
 ## Stability calculation
 This snippet explains how to perform a stability calculation
