@@ -2,7 +2,7 @@
 
 The MACS3.Connected REST APIs are for developers who want to integrate their application with MACS3.Connected and provide access to resources (data entities) via URI paths. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
 
-The MACS3.Connected APIs are based on the OpenAPI specification (formerly known as Swagger) and enable developers to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and more programming languages.
+The MACS3.Connected REST APIs are based on the OpenAPI specification (formerly known as Swagger) and enable developers to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and more programming languages.
 
 The following APIs are available:
 
@@ -26,7 +26,7 @@ MACS3.Connected SDK packages can be installed into any .NET project, provided th
 ### Add the MACS3.Connected Stability SDK from nuget.org
 1. In Visual Studio select Tools > NuGet Package Manager > Package Manager Console menu command
 2. Once the console opens, check that the Default project drop-down list shows the project into which you want to install the package.
-3. Enter the command ```Install-Package nn```
+3. Enter the command ```Install-Package MACS3.Connected.SDK.Stability```
 
 ### Get your API-KEY
 
