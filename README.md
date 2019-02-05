@@ -1,22 +1,19 @@
 # MACS3.Connected APIs
 
-The MACS3.Connected REST APIs are for developers who want to integrate their application with MACS3.Connected and provide access to resources (data entities) via URI paths. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
-
-The MACS3.Connected REST APIs are based on the OpenAPI specification (formerly known as Swagger) and enable developers to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and more programming languages.
-
 The following APIs are available:
 
 * MACS3.Connected.Stability.SDK
 * MACS3.Connected.Lashing.SDK
 * MACS3.Connected.DangerousCargo.SDK
 
+The MACS3.Connected REST APIs enable developers to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and many more programming languages. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
+The technical documentation is based on the OpenAPI specification (formerly known as Swagger) and can be used by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub).
+
 Technical documentation is available at:
 
 * https://api.stability.macs3.com
 * https://api.lashing.macs3.com
 * https://api.dago.macs3.com
-
-Find popular generators at [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub).
 
 ## Sample: MACS3.Connected Stability Calculation with Microsoft Visual Studio and C# 7.1:
 
