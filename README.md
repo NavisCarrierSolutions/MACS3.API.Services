@@ -29,10 +29,10 @@ MACS3.Connected SDK packages can be installed into any .NET project, provided th
 
 ### Use the SDK in your project:
 ```
-using Macs3.Connected.SDK.Stability;
+using MACS3.Connected.SDK.Stability;
 using Model = IO.Swagger.Model;
 
-namespace Macs3.Connected.StabilityTest
+namespace MACS3.Connected.StabilityTest
 {
     class Program
     {
@@ -40,7 +40,7 @@ namespace Macs3.Connected.StabilityTest
         {
             var provider = new ApiKeyProvider { ApiKey = "YOUR-API-KEY" };
             
-            using (var apiClient = await Macs3.Connected.SDK.Stability.API2.CreateClientAsync(provider))
+            using (var apiClient = await MACS3.Connected.SDK.Stability.API2.CreateClientAsync(provider))
             {
                 try
                 {
