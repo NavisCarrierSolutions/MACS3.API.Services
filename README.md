@@ -44,11 +44,8 @@ namespace Macs3.Connected.StabilityTest
             {
                 try
                 {
-                    Model.CalculationsParameter parameter;
-                    Model.CalculationsResult result;
-
-                    parameter = new Model.CalculationsParameter();
-                    result = await apiClient.CalculateStabilityAsync(YOUR-IMO-NUMBER, parameter);
+                    var parameter = new Model.CalculationsParameter();
+                    var result = await apiClient.CalculateStabilityAsync(YOUR-IMO-NUMBER, parameter);
                 }
                 catch (ApiException)
                 {
@@ -58,6 +55,8 @@ namespace Macs3.Connected.StabilityTest
     }
 }
 ```
+
+This is a dead simple stability-calculation sample. For more, please contact us or check out the technical documentation at https://api.stability.macs3.com
 
 ## Lashing calculation
 This snippet explains how to perform a lashing calculation.
