@@ -16,7 +16,16 @@ Technical documentation is available at:
 * https://api.lashing.macs3.com
 * https://api.dago.macs3.com
 
-[Postman](postman.md)
+## Requirements
+
+A MACS3.Connected account for your company
+A company related API-Key
+A company/vessel assignment (by IMO-Number)
+A usage-based billing plan
+
+## Quick Start: Explore the services through RESTful APIs
+
+To quickly explorer the APIs you may use Swagger or [Postman](postman.md). While Swagger has got the benefit of having the service-documentation integrated right at your fingertips, experienced users may prefer to use Postman as exploration-tool. Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options.
 
 ## Sample: MACS3.Connected Stability Calculation with Microsoft Visual Studio and C# 7.1:
 
@@ -53,8 +62,8 @@ namespace MACS3.Connected.StabilityTest
                     {
                         new Model.ContainerParameter(
                             id: 1,
-                            position:
-                            "170182", typeIsoCode: "22G0",
+                            position: "170182",
+                            typeIsoCode: "22G0",
                             grossWeight: 14,
                             containerId: "AAAU1234567"
                         )
