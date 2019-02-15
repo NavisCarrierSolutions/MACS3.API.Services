@@ -1,6 +1,6 @@
-# Navis NCVS Cloud services
+# Navis NCVS MACS3.Connected Cloud-Services
 
-The Navis NCVS Cloud Services enable users to perform stability, lashing and dangerous cargo calculations for vessels.
+The MACS3.Connected Cloud-Services enable users to perform stability, lashing and dangerous cargo calculations for vessels.
 
 ## Requirements
 
@@ -19,13 +19,13 @@ While Swagger has got the benefit of having the service-documentation integrated
 
 You can easily integrate the services into your solutions by utilizing Client SDKs that will help to take the RESTful API complexity out of coding by providing models and endpoints in reusable packages. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
  
-If your coding platform is C#, you may use the SDKs provided by Navis NCVS:
+If your coding platform is C#, you may use the SDKs pubslied by Navis NCVS at [https://www.nuget.org](https://www.nuget.org):
  
-MACS3.Connected.SDK.Stability
-MACS3.Connected.SDK.Lashing
-MACS3.Connected.SDK.DangerousCargo
+MACS3.Connected.SDK.Stability  
+MACS3.Connected.SDK.Lashing  
+MACS3.Connected.SDK.DangerousCargo  
  
-If you need SDKs for e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations are based on the OpenAPI specification (aka Swagger) and can be used by a variety of popular code-generators like Swagger Codegen or SwaggerHub to generate Client SDKs.
+If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations are based on the OpenAPI specification (aka Swagger) and can be used by a variety of popular code-generators like Swagger Codegen or SwaggerHub to generate Client SDKs.
 
 ## Sample: MACS3.Connected Stability Calculation with Microsoft Visual Studio and C# 7.1:
 
