@@ -11,7 +11,9 @@ A usage-based billing plan
 
 ## Quick Start: Explore the services through RESTful APIs
 
-To quickly explore the APIs you may use [Swagger](swagger.md) or [Postman](postman.md). While Swagger has got the benefit of having the service-documentation integrated right at your fingertips, experienced users may prefer to use Postman as exploration-tool. Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options.
+To quickly explore the APIs you may follow our [Swagger](swagger.md) or [Postman](postman.md) guide.
+
+While Swagger has got the benefit of having the service-documentation integrated right at your fingertips, experienced users may prefer to use Postman as exploration-tool. Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options.
 
 ## Advanced: Integrate the services into your solution
 
