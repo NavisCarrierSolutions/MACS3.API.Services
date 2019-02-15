@@ -47,9 +47,49 @@ namespace MACS3.Connected.StabilityTest
                 try
                 {
                     var parameter = new Model.CalculationsParameter();
-                    var result = await apiClient.CalculateStabilityAsync(YOUR-IMO-NUMBER, parameter);
+
+                    parameter.Containers = new List<Model.ContainerParameter>
+                    {
+                        new Model.ContainerParameter(
+                            id: 1,
+                            position:
+                            "170182", typeIsoCode: "22G0",
+                            grossWeight: 14,
+                            containerId: "AAAU1234567"
+                        )
+                    };
+
+                    parameter.Tanks = new List<Model.TankParameter>
+                    {
+                        new Model.TankParameter(name: "5DBP", density: 1.0250, percentageFilled: 50, maxFs: false)
+                    };
+
+                    parameter.Constants = new List<Model.ConstantParameter>
+                    {
+                        new Model.ConstantParameter(
+                            name: "Deadweight constant",
+                            lcg: 79.27,
+                            tcg: 0,
+                            vcg: 7.65,
+                            wda: -4.6,
+                            wdf: 295,
+                            weight: 676
+                        )
+                    };
+
+                    parameter.Calculate = new Model.WhatToCalculateParameter(
+                        stability: true,
+                        strength: false,
+                        tanks: true
+                        );
+
+                    var userSettings = new Model.SettingsParameter {};
+                    parameter.Settings = userSettings;
+
+                    var json = JsonConvert.SerializeObject(parameter);
+                    var result = await apiClient.CalculateStabilityAsync(YOUR_IMO_NUMBER, parameter);
                 }
-                catch (ApiException)
+                catch (ApiException e)
                 {
                 }
             }
