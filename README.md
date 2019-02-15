@@ -83,10 +83,8 @@ namespace MACS3.Connected.StabilityTest
                         tanks: true
                         );
 
-                    var userSettings = new Model.SettingsParameter {};
-                    parameter.Settings = userSettings;
+                    parameter.Settings = new Model.SettingsParameter();
 
-                    var json = JsonConvert.SerializeObject(parameter);
                     var result = await apiClient.CalculateStabilityAsync(YOUR_IMO_NUMBER, parameter);
                 }
                 catch (ApiException e)
