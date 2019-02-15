@@ -1,31 +1,29 @@
-# Navis NCVS Cloud services - MACS3.Connected RESTful API
+# Navis NCVS Cloud services
 
-The MACS3.Connected REST APIs enable developers to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and many more programming languages. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
-
-The following APIs are available:
-
-* MACS3.Connected.SDK.Stability
-* MACS3.Connected.SDK.Lashing
-* MACS3.Connected.SDK.DangerousCargo
-
-The technical documentation is based on the OpenAPI specification (formerly known as Swagger) and can be used by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub).
-
-Technical documentation is available at:
-
-* https://api.stability.macs3.com
-* https://api.lashing.macs3.com
-* https://api.dago.macs3.com
+The Navis NCVS Cloud Services enable users to perform stability, lashing and dangerous cargo calculations for vessels.
 
 ## Requirements
 
-A MACS3.Connected account for your company
-A company related API-Key
-A company/vessel assignment (by IMO-Number)
-A usage-based billing plan
+A MACS3.Connected account for your company  
+A company related API-Key  
+A company/vessel assignment (by IMO-Number)  
+A usage-based billing plan  
 
 ## Quick Start: Explore the services through RESTful APIs
 
-To quickly explorer the APIs you may use Swagger or [Postman](postman.md). While Swagger has got the benefit of having the service-documentation integrated right at your fingertips, experienced users may prefer to use Postman as exploration-tool. Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options.
+To quickly explore the APIs you may use [Swagger](swagger.md) or [Postman](postman.md). While Swagger has got the benefit of having the service-documentation integrated right at your fingertips, experienced users may prefer to use Postman as exploration-tool. Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options.
+
+## Advanced: Integrate the services into your solution
+
+You can easily integrate the services into your solutions by utilizing Client SDKs that will help to take the RESTful API complexity out of coding by providing models and endpoints in reusable packages. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
+ 
+If your coding platform is C#, you may use the SDKs provided by Navis NCVS:
+ 
+MACS3.Connected.SDK.Stability
+MACS3.Connected.SDK.Lashing
+MACS3.Connected.SDK.DangerousCargo
+ 
+If you need SDKs for e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations are based on the OpenAPI specification (aka Swagger) and can be used by a variety of popular code-generators like Swagger Codegen or SwaggerHub to generate Client SDKs.
 
 ## Sample: MACS3.Connected Stability Calculation with Microsoft Visual Studio and C# 7.1:
 
