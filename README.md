@@ -1,4 +1,6 @@
-# MACS3.Connected APIs
+# Navis NCVS Cloud services - MACS3.Connected RESTful API
+
+The MACS3.Connected REST APIs enable developers to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and many more programming languages. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
 
 The following APIs are available:
 
@@ -6,9 +8,6 @@ The following APIs are available:
 * MACS3.Connected.SDK.Lashing
 * MACS3.Connected.SDK.DangerousCargo
 
-[Postman](postman.md)
-
-The MACS3.Connected REST APIs enable developers to generate server stubs and client SDKs for e.g. JavaScript, Java, C#, Objective C, Swift, C++ and many more programming languages. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
 The technical documentation is based on the OpenAPI specification (formerly known as Swagger) and can be used by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub).
 
 Technical documentation is available at:
@@ -16,6 +15,8 @@ Technical documentation is available at:
 * https://api.stability.macs3.com
 * https://api.lashing.macs3.com
 * https://api.dago.macs3.com
+
+[Postman](postman.md)
 
 ## Sample: MACS3.Connected Stability Calculation with Microsoft Visual Studio and C# 7.1:
 
