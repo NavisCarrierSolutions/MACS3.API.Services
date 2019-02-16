@@ -9,20 +9,19 @@ You can easily integrate the services into your solutions by calling the RESTful
 * A MACS3.Connected account for your company
 * A company related API-Key
 * A company/vessel assignment (by IMO-Number)
-* A usage-based billing plan
 
 ## Quick Start: Explore the services through RESTful APIs
 
 The service documentations are based on the OpenAPI specification (aka Swagger) and can best be explored by using a REST Client like Swagger or Postman.
 
 * Swagger is has got the benefit of being a combination of REST Client and built-in documentation right at your fingertips - so it's a good point to start.
-* Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options. More experienced users may prefer to use Postman as REST Client and use the Swagger documentation just for reference
+* Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options. More experienced users may prefer to use Postman as REST Client and use the Swagger documentation just for reference.
 
 Have your API-Key ready and follow our [Swagger](swagger.md) or [Postman](postman.md) guide for a quick start.
 
 ## Advanced: Integrate the services into your solution
 
-To take the RESTful API complexity out of coding, you should use Client SDKs which provide the models and endpoints as reusable packages. 
+When it comes to integration, you should use Client SDKs to take the RESTful API complexity out of coding and provide the models and endpoints of each service as reusable packages. 
  
 * If your coding platform is C#, you may use the SDKs published by Navis NCVS at nuget.org:  
 
