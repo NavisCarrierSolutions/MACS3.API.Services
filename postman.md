@@ -26,7 +26,7 @@ Consult the [service documentation](https://api.stability.macs3.com) for the det
 ### 4. Specify `Body` details
 * Select `Body`.
 * Select `RAW`  
-* Fill the parameters in JSON-Notation. This is often the tricky part and requires an intense inspection of the documentation. Please use the JSON-Snippet below.   
+* Fill the parameters in JSON-Notation. This is often the tricky part and requires an intense inspection of the [service documentation](https://api.stability.macs3.com). For the walk-trough, please use the JSON-Snippet below.   
 
 ```
 {"tanks":[{"name":"5DBP","density":1.025,"percentageFilled":50.0,"maxFs":false}],"containers":[{"id":1,"containerId":"AAAU1234567","typeIsoCode":"22G0","grossWeight":14.0,"position":"170182"}],"constants":[{"name":"Deadweight constant","weight":676.0,"lcg":79.27,"vcg":7.65,"tcg":0.0,"wda":-4.6,"wdf":295.0}],"settings":{"seawaterDensity":1.025},"calculate":{"loadingCondition":true,"tanks":true,"stability":true,"hydrostatics":true,"strength":false,"strengthCurves":false,"visibility":true,"summary":true}}
