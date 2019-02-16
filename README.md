@@ -18,7 +18,7 @@ The service documentations are based on the OpenAPI specification (aka Swagger) 
 * Swagger is has got the benefit of being a combination of REST Client and built-in documentation right at your fingertips - so it's a good point to start.
 * Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options. More experienced users may prefer to use Postman as REST Client and use the Swagger documentation just for reference
 
-Please follow our [Swagger](swagger.md) or [Postman](postman.md) guide for a quick start.
+Have your API-Key ready and follow our [Swagger](swagger.md) or [Postman](postman.md) guide for a quick start.
 
 ## Advanced: Integrate the services into your solution
 
@@ -30,6 +30,8 @@ To take the RESTful API complexity out of coding, you should use Client SDKs whi
   MACS3.Connected.SDK.Lashing  
   MACS3.Connected.SDK.DangerousCargo  
   
-  Please follow our [C# Stability Sample](csharp_stability.md).
+  Have your API-Key ready and follow our [C# Stability Sample](csharp_stability.md).
 
-* If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs. For reference you may follow our [C# Stability Sample](csharp_stability.md).
+* If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs.
+
+  For reference you should also follow our [C# Stability Sample](csharp_stability.md).
