@@ -6,10 +6,10 @@ You can easily integrate the services into your solutions by calling the RESTful
 
 ## Requirements
 
-A MACS3.Connected account for your company  
-A company related API-Key  
-A company/vessel assignment (by IMO-Number)  
-A usage-based billing plan  
+* A MACS3.Connected account for your company
+* A company related API-Key
+* A company/vessel assignment (by IMO-Number)
+* A usage-based billing plan
 
 ## Quick Start: Explore the services through RESTful APIs
 
