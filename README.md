@@ -1,4 +1,4 @@
-# Navis NCVS MACS3.Connected Cloud-Services
+# MACS3.Connected Cloud-Services
 
 The MACS3.Connected Cloud-Services enable users to perform stability, lashing and dangerous cargo calculations for vessels.
 
@@ -11,21 +11,23 @@ A usage-based billing plan
 
 ## Quick Start: Explore the services through RESTful APIs
 
-To quickly explore the APIs you may follow our [Swagger](swagger.md) or [Postman](postman.md) guide.
+Our service documentations are based on the OpenAPI specification (aka Swagger) and can best be explored by using a REST Client like Swagger or Postman.
 
-While Swagger has got the benefit of having the service-documentation integrated right at your fingertips, experienced users may prefer to use Postman as exploration-tool. Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options.
+Swagger is has got the benefit of being a combination of REST Client and built-in documentation right at your fingertips - so it's a good point to start. More experienced users may prefer to use Postman as REST Client and use the Swagger documentation for reference. Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options.
+
+You may follow our [Swagger](swagger.md) or [Postman](postman.md) guide for a quick start.
 
 ## Advanced: Integrate the services into your solution
 
-You can easily integrate the services into your solutions by utilizing Client SDKs that will help to take the RESTful API complexity out of coding by providing models and endpoints in reusable packages. To use a REST API, your application will make an HTTP request and parse the response. By default, the response format is JSON.
+You can easily integrate the services into your solutions by calling the RESTful APIs, so your application will make HTTP requests and parse the response. By default, the response format is JSON. To take the RESTful API complexity out of coding, you should use Client SDKs which provide the models and endpoints as reusable packages. 
  
-If your coding platform is C#, you may use the SDKs pubslied by Navis NCVS at [https://www.nuget.org](https://www.nuget.org):
+If your coding platform is C#, you may use the SDKs published by Navis NCVS at nuget.org:
  
 MACS3.Connected.SDK.Stability  
 MACS3.Connected.SDK.Lashing  
 MACS3.Connected.SDK.DangerousCargo  
  
-If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations are based on the OpenAPI specification (aka Swagger) and can be used by a variety of popular code-generators like Swagger Codegen or SwaggerHub to generate Client SDKs.
+If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs.
 
 ## Sample: MACS3.Connected Stability Calculation with Microsoft Visual Studio and C# 7.1:
 
