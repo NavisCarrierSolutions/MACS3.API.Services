@@ -29,8 +29,8 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   MACS3.Connected.SDK.Lashing  
   MACS3.Connected.SDK.DangerousCargo  
   
-  Have your API-Key ready and follow our [C# Stability Sample](csharp_stability.md).
+  Have your API-Key ready and see how to call the stability service in our [C# Stability Sample](csharp_stability.md).
 
-* If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs.
+* If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs. Please check out the documentation of your preferred code-generator for details. 
 
-  For reference you should also follow our [C# Stability Sample](csharp_stability.md).
+  Even when coding on another platform, see how to call the stablity service in our [C# Stability Sample](csharp_stability.md).
