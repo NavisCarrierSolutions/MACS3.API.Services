@@ -21,7 +21,7 @@ Have your API-Key ready and follow our [Swagger](swagger.md) or [Postman](postma
 
 ## Advanced: Integrate the services into your solution
 
-When it comes to integration, you should use Client SDKs to take the RESTful API complexity out of coding and provide the models and endpoints of each service as reusable packages. 
+When it comes to integration, you should use Client SDKs to take the RESTful API complexity out of coding as the SDKs provide models and endpoints for each service as reusable packages. 
  
 * If your coding platform is C#, you may use the SDKs published by Navis NCVS at nuget.org:  
 
