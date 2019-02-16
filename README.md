@@ -33,4 +33,9 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
 
 * If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs. Please check out the documentation of your preferred code-generator for details. 
 
+  The following service documentations are available:
+  * https://api.stability.macs3.com
+  * https://api.lashing.macs3.com
+  * https://api.dago.macs3.com
+
   Even when coding on another platform, see how to call the stablity service in our [C# Stability Sample](csharp_stability.md).
