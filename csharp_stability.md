@@ -10,7 +10,10 @@ This sampe shows how to quickly perform a cloudbased calculation using Microsoft
 * Once the console opens, check that the Default project drop-down list shows the project into which you want to install the package.
 * Enter the command ```Install-Package MACS3.Connected.SDK.Stability```
 
-## 3. Replace program.cs in your project with the following snippet
+## 3. Sample code
+
+The full sample can be downloaded [here](samples)
+
 ```
 using System.Collections.Generic;
 using System.Threading.Tasks;
