@@ -1,19 +1,21 @@
-# Sample: A dead simple Stability Calculation with Microsoft Visual Studio and C#:
+# A dead simple Stability Calculation sample
+This sampe shows how to quickly perform a cloudbased calculation using Microsoft Visual Studio, C# and MACS3.Connected SDKs. MACS3.Connected SDK packages can be installed into any .NET project, provided that the package supports the same target framework as the project.
 
 ## 1. Create a project
-MACS3.Connected SDK packages can be installed into any .NET project, provided that the package supports the same target framework as the project.
-
 * Open Visual Studio
-* Create a console-application
+* Create a Console App (C#)
 
 ## 2. Add the MACS3.Connected Stability SDK from nuget.org
 * In Visual Studio select Tools > NuGet Package Manager > Package Manager Console menu command
 * Once the console opens, check that the Default project drop-down list shows the project into which you want to install the package.
 * Enter the command ```Install-Package MACS3.Connected.SDK.Stability```
 
-## 3. Use the SDK in your project:
+## 3. Replace main.cs in your project with the following snippet
 ```
-using MACS3.Connected.SDK.Stability;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using Newtonsoft.Json;
+using Macs3.Connected;
 using Model = IO.Swagger.Model;
 
 namespace MACS3.Connected.StabilityTest
@@ -69,8 +71,10 @@ namespace MACS3.Connected.StabilityTest
 
                         var userSettings = new Model.SettingsParameter { };
                         parameter.Settings = userSettings;
-
+                        
+                        // generate json fo Swagger/Postman
                         var json = JsonConvert.SerializeObject(parameter);
+                        
                         var result = await apiClient.CalculateStabilityAsync(YOUR-IMO-NUMBER, parameter);
                     }
                     catch (ApiException e)
