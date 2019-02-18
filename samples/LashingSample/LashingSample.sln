@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.329
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LashingSample", "LashingSample\LashingSample.csproj", "{794997C0-30F7-4779-8916-A8C60F3934A0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{794997C0-30F7-4779-8916-A8C60F3934A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{794997C0-30F7-4779-8916-A8C60F3934A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{794997C0-30F7-4779-8916-A8C60F3934A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{794997C0-30F7-4779-8916-A8C60F3934A0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95CF0F20-44C2-4D70-B321-F73519C1C3AB}
+	EndGlobalSection
+EndGlobal
