@@ -35,8 +35,7 @@ Consult the [service documentation](https://api.stability.macs3.com) for the det
 
 ### 5. Send the request and get response
 * Click `SEND`
-
-Consult the [service documentation](https://api.stability.macs3.com) for details about the returned http-status-code and result.
+* Shortly after sending your request, you will receive the service response. Consult the [service documentation](https://api.stability.macs3.com) about details explaining the http-status-code and further response-details.
 
 ![Login](images/pm_stability_send.png)
 
