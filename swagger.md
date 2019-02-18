@@ -8,7 +8,7 @@
 
 ## 2. Authorize with your company API-Key
 
-* NOTE: Prepend your API-Key with "ApkiKey<space>".
+* NOTE: Prepend your API-Key with "ApiKey" and a space.
 * Click [Authorize].
 
 ![Login](images/sw_stability_authorize.png)
