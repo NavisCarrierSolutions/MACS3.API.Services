@@ -70,6 +70,6 @@ namespace LashingSample
 
 In the above given sample, you just have to replace "YOUR-API-KEY" and YOUR-IMO-NUMBER with your specific data.
 
-If you run the above given sample and your request is valid (http-status-code equals 200), you may continue and inspect the details in ```result``` according to the technical documentation at https://api.stability.macs3.com.
+If you run the above given sample and your request is valid (http-status-code equals 200), you may continue and inspect the details in ```result``` according to the technical documentation at https://api.lashing.macs3.com.
 
 [back](README.md)
