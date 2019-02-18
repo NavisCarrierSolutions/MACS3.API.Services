@@ -17,7 +17,7 @@ The service documentations are based on the OpenAPI specification (aka Swagger) 
 * Swagger is has got the benefit of being a combination of REST Client and built-in documentation right at your fingertips - so it's a good point to start.
 * Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options. More experienced users may prefer to use Postman as REST Client and use the Swagger documentation just for reference.
 
-Have your API-Key ready and follow our [Swagger](swagger.md) or [Postman](postman.md) guide for a quick start.
+Have your API-Key ready and follow our [Swagger](swagger.md) or [Postman](postman.md) guide (Stability) for a quick start.
 
 ## Advanced: Integrate the services into your solution
 
@@ -29,7 +29,7 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   MACS3.Connected.SDK.Lashing  
   MACS3.Connected.SDK.DangerousCargo  
   
-  Have your API-Key ready and see how to call the stability service in our [C# Stability Sample](csharp_stability.md).
+  Have your API-Key ready and see how to call the services in the [C# Stability Sample](csharp_stability.md) and [C# Lashing Sample](csharp_lashing.md).
 
 * If you are coding on another platform e.g. JavaScript, Java, C#, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs. Please check out the documentation of your preferred code-generator for details. 
 
@@ -38,4 +38,4 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   * https://api.lashing.macs3.com
   * https://api.dago.macs3.com
 
-  Even when coding on another platform, see how to call the stablity service in our [C# Stability Sample](csharp_stability.md).
+  Even when coding on another platform, see how to call the stablity service in the [C# Stability Sample](csharp_stability.md) and  [C# Lashing Sample](csharp_lashing.md).
