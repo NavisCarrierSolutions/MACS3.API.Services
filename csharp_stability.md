@@ -90,6 +90,8 @@ namespace MACS3.Connected.StabilityTest
 }
 ```
 
-Fore more details, please check out the technical documentation at https://api.stability.macs3.com
+In the above given sample, you just have to replace "YOUR-API-KEY" and YOUR-IMO-NUMBER with your specific data.
+
+If the request is valid (http-status-code equals 200), you may continue and inspect the details in ```result``` accordingto the technical documentation at https://api.stability.macs3.com.
 
 [back](README.md)
