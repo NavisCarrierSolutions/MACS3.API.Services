@@ -10,7 +10,7 @@ If you are new to Postman, create a new collection named e.g. "Navis NCVS Cloud 
 Consult the [service documentation](https://api.stability.macs3.com) for the details to setup.
 
 * Set the verb to `POST`.  
-* Set the route to https://api.stability.macs3.com/ships{imoNumber}/stability  
+* Set the route to https://api.stability.macs3.com/ships/{imoNumber}/stability  
 * Replace the {imoNumber} in the route with the IMO-Number (9526875).
 
 ![Login](images/pm_stability.png)
