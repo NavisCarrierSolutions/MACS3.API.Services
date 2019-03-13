@@ -37,10 +37,12 @@ namespace LashingSample
                 {
                     try
                     {
+                        var lashParameters = await apiClient.GetDynamicLashParametersAsync(imoNumber);
+                        var vesselSpeed = (double)lashParameters.Parameters.SingleOrDefault(o => o.ValueType == Model.ParameterInfo.ValueTypeEnum.SpeedInKnots).DefaultValue;
                         var parameters = new Model.LashingParameters(new Model.DynamicParameters(
                             gm: 5,
                             draft: 10,
-                            vesselSpeed: 15.0,
+                            vesselSpeed:  vesselSpeed /* 15.0 */,
                             windSpeed: 40.0));
 
                         parameters.Containers = new List<Model.ContainerParameter>
