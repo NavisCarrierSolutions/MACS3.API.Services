@@ -15,11 +15,11 @@ This sampe shows how to quickly perform a cloudbased calculation using Microsoft
 The full sample can be downloaded [here](samples)
 
 ```
-using Macs3.Connected;
+using MACS3.Connected.SDK.Core;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Model = IO.Swagger.Model;
+using Model = MACS3.Connected.SDK.Model;
 
 namespace LashingSample
 {
