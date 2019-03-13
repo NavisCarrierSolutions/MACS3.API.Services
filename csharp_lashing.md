@@ -39,6 +39,7 @@ namespace LashingSample
                     {
                         var lashParameters = await apiClient.GetDynamicLashParametersAsync(imoNumber);
                         var vesselSpeed = (double)lashParameters.Parameters.SingleOrDefault(o => o.ValueType == Model.ParameterInfo.ValueTypeEnum.SpeedInKnots).DefaultValue;
+                        
                         var parameters = new Model.LashingParameters(new Model.DynamicParameters(
                             gm: 5,
                             draft: 10,
