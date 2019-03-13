@@ -48,8 +48,8 @@ namespace LashingSample
 
                         parameters.Containers = new List<Model.ContainerParameter>
                         {
-                            new Model.ContainerParameter(id:1, containerId:"AAAU1234568", typeIsoCode:"42G0", grossWeight:10.1, position:"020206", relativeVcg:0.50, height:2.591, length:12.192, width:2.438),
-                            new Model.ContainerParameter(id:2, containerId:"AAAU1234569", typeIsoCode:"42G0", grossWeight:10.1, position:"020282", relativeVcg:0.50, height:2.591, length:12.192, width:2.438),
+                            new Model.ContainerParameter(id:"1", containerId:"AAAU1234568", typeIsoCode:"42G0", grossWeight:10.1, position:"020206", relativeVcg:0.50, height:2.591, length:12.192, width:2.438),
+                            new Model.ContainerParameter(id:"2", containerId:"AAAU1234569", typeIsoCode:"42G0", grossWeight:10.1, position:"020282", relativeVcg:0.50, height:2.591, length:12.192, width:2.438),
                         };
 
                         parameters.Calculate = new Model.WhatToCalculateParameterLashing
