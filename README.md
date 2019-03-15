@@ -23,7 +23,7 @@ Have your API-Key ready and follow our [Swagger](swagger.md) or [Postman](postma
 
 When it comes to integration, you should use Client SDKs to take the RESTful API complexity out of coding as the SDKs provide models and endpoints for each service as reusable packages. 
  
-* If your coding platform is C#, you may use the SDKs published by Navis NCVS at nuget.org:  
+* If your coding platform is C#, you may use the SDKs published by Navis NCVS at [nuget.org](https://www.nuget.org/packages?q=+MACS3.Connected):  
 
   MACS3.Connected.SDK.Stability  
   MACS3.Connected.SDK.Lashing  
