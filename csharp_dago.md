@@ -15,11 +15,10 @@ This sampe shows how to quickly perform a cloudbased calculation using Microsoft
 The full sample can be downloaded [here](samples)
 
 ```
+using MACS3.Connected.SDK.Core;
+using MACS3.Connected.SDK.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Macs3.Connected;
-using Model = IO.Swagger.Model;
 
 namespace MACS3.Connected.DangerousGoodsTest
 {
@@ -29,56 +28,104 @@ namespace MACS3.Connected.DangerousGoodsTest
         {
             Task.Run(async () =>
             {
-                var provider = new ApiKeyProvider {ApiKey = "YOUR-API-KEY"};
-
-                using (var apiClient = await MACS3.Connected.SDK.Stability.API2.CreateClientAsync(provider))
+                var provider = new ApiKeyProvider { ApiKey = "<YOUR-API-KEY>" };
+                
+                using (var apiClient = await MACS3.Connected.SDK.DangerousGoods.API2.CreateClientAsync(provider))
                 {
                     try
                     {
-                        var parameter = new Model.CalculationsParameter();
+                        DaGoCheckParameters parameter = new DaGoCheckParameters();
 
-                        parameter.Containers = new List<Model.ContainerParameter>
+                        parameter.Settings = new DaGoSettingsParameter(
+                            amendmentNumber: 38,
+                            checkForSunlight: true,
+                            stowKeepCoolCargoAwayFromReefers: true,
+                            stowKeepCoolCargoAwayFromSun: true);
+
+                        parameter.Containers = new List<DaGoContainerParameter>
                         {
-                            new Model.ContainerParameter(
-                                id: 1,
-                                position: "170182",
-                                typeIsoCode: "22G0",
-                                grossWeight: 14,
-                                containerId: "AAAU1234567"
+                            new DaGoContainerParameter
+                            (
+                                id: "11",
+                                containerId: "NCVS1234568",
+                                typeIsoCode: "42G0",
+                                grossWeight: 10.1,
+                                position: "020206",
+                                relativeVcg: 0.50,
+                                height: 2.591,
+                                length: 12.192,
+                                width: 2.438,
+                                openTop: false,
+                                liveReefer: false,
+                                empty: false,
+                                doorOrientationAft: false,
+                                foodStuff: false,
+                                sunExposed: false,
+                                dangerousGoods: new List<DangerousGoodParameter>
+                                {
+                                    new DangerousGoodParameter
+                                    (
+                                        un: 1234,
+                                        _class: "3",
+                                        packingGroup: 2,
+                                        subLabel: "",
+                                        subLabel2: "",
+                                        stowageCategory: "E",
+                                        technicalName: "",
+                                        flashpoint: -28,
+                                        limitedQuantity: false,
+                                        exceptedQuantity: false,
+                                        marinePollutant: false,
+                                        caa: false,
+                                        segregationGroup: ""
+                                    )
+                                }
+                            ),
+                            new DaGoContainerParameter
+                            (
+                                id: "12",
+                                containerId: "NCVS1234569",
+                                typeIsoCode: "42G0",
+                                grossWeight: 10.1,
+                                position: "020208",
+                                relativeVcg: 0.50,
+                                height: 2.591,
+                                length: 12.192,
+                                width: 2.438,
+                                openTop: false,
+                                liveReefer: false,
+                                empty: false,
+                                doorOrientationAft: false,
+                                setPoint: 0,
+                                foodStuff: false,
+                                sunExposed: false,
+                                dangerousGoods: new List<DangerousGoodParameter>
+                                {
+                                    new DangerousGoodParameter
+                                    (
+                                        un: 4,
+                                        _class: "1.1D",
+                                        packingGroup: 1,
+                                        subLabel: "",
+                                        subLabel2: "",
+                                        stowageCategory: "4",
+                                        technicalName: "",
+                                        limitedQuantity: false,
+                                        exceptedQuantity: false,
+                                        marinePollutant: false,
+                                        caa: false,
+                                        segregationGroup: ""
+                                    )
+                                }
                             )
                         };
 
-                        parameter.Tanks = new List<Model.TankParameter>
+                        parameter.ContainerToCheck = new List<ContainerIdentifier>
                         {
-                            new Model.TankParameter(name: "5DBP", density: 1.0250, percentageFilled: 50, maxFs: false)
+                            new ContainerIdentifier(id: "11", containerId: "NCVS1234568", position: "020206")
                         };
 
-                        parameter.Constants = new List<Model.ConstantParameter>
-                        {
-                            new Model.ConstantParameter(
-                                name: "Deadweight constant",
-                                lcg: 79.27,
-                                tcg: 0,
-                                vcg: 7.65,
-                                wda: -4.6,
-                                wdf: 295.0,
-                                weight: 676.0
-                            )
-                        };
-
-                        parameter.Calculate = new Model.WhatToCalculateParameter(
-                            stability: true,
-                            strength: false,
-                            tanks: true
-                        );
-
-                        var userSettings = new Model.SettingsParameter { };
-                        parameter.Settings = userSettings;
-                        
-                        // generate json fo Swagger/Postman
-                        var json = JsonConvert.SerializeObject(parameter);
-                        
-                        var result = await apiClient.CalculateStabilityAsync(YOUR-IMO-NUMBER, parameter);
+                        DaGoCheckResult result = await apiClient.PerformDangerousGoodsCheckAsync(YOUR-IMO-NUMBER, parameter);
                     }
                     catch (ApiException e)
                     {
@@ -92,6 +139,6 @@ namespace MACS3.Connected.DangerousGoodsTest
 
 In the above given sample, you just have to replace "YOUR-API-KEY" and YOUR-IMO-NUMBER with your specific data.
 
-If you run the above given sample and your request is valid (http-status-code equals 200), you may continue and inspect the details in ```result``` according to the technical documentation at https://api.stability.macs3.com.
+If you run the above given sample and your request is valid (http-status-code equals 200), you may continue and inspect the details in ```result``` according to the technical documentation at https://api.dago.macs3.com.
 
 [back](README.md)
