@@ -57,8 +57,10 @@ namespace StabilitySample
                             tanks: true
                         );
 
-                        var userSettings = new Model.SettingsParameter { };
-                        parameter.Settings = userSettings;
+                        parameter.Settings = new Model.SettingsParameter();
+
+                        var availParameters = await apiClient.GetStabilityParametersAsync(imoNumber);
+                        parameter.Settings.FreeboardMode = "Summer"; // see availParameters.FreeboardModes[];
 
                         var json = JsonConvert.SerializeObject(parameter);
                         var result = await apiClient.CalculateStabilityAsync(imoNumber, parameter);
