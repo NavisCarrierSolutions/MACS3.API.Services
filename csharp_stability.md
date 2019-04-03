@@ -72,8 +72,10 @@ namespace MACS3.Connected.StabilityTest
                             tanks: true
                         );
 
-                        var userSettings = new Model.SettingsParameter { };
-                        parameter.Settings = userSettings;
+                        parameter.Settings = new Model.SettingsParameter();
+                        
+                        var availParameters = await apiClient.GetStabilityParametersAsync(imoNumber);
+                        parameter.Settings.FreeboardMode = "Summer"; // see availParameters.FreeboardModes[];
                         
                         // generate json fo Swagger/Postman
                         var json = JsonConvert.SerializeObject(parameter);
