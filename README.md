@@ -1,6 +1,6 @@
 # MACS3 API Services
 
-The MACS3 API Services enable users to perform cloud-based stability, lashing and dangerous cargo calculations for vessels.
+The MACS3 API Services enable users to perform cloud-based stability-, lashing-, dangerous cargo calculations and condition checks for vessels.
 
 You can easily integrate the services into your solutions by calling the RESTful APIs, so your application will make HTTP requests and parse the response. By default, the response format is JSON
 
@@ -39,5 +39,6 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   * https://api.stability.macs3.com
   * https://api.lashing.macs3.com
   * https://api.dago.macs3.com
+  * https://api.conditioncheck.macs3.com
 
   Even when coding on another platform, see how to call the stablity service in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md) and [C# DangerousGoods Sample](csharp_dago.md).
