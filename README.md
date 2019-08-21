@@ -1,6 +1,6 @@
-# MACS3.Connected Cloud-Services
+# MACS3 API Services
 
-The MACS3.Connected Cloud-Services enable users to perform stability, lashing and dangerous cargo calculations for vessels.
+The MACS3 API Services enable users to perform cloud-based stability, lashing and dangerous cargo calculations for vessels.
 
 You can easily integrate the services into your solutions by calling the RESTful APIs, so your application will make HTTP requests and parse the response. By default, the response format is JSON
 
