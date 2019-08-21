@@ -6,9 +6,11 @@ You can easily integrate the services into your solutions by calling the RESTful
 
 ## Requirements
 
-* A MACS3.Connected account for your company
-* A company related API-Key
-* A company/vessel assignment (by IMO-Number)
+* Your personal company account
+* Your company related API-Key
+* Your company/vessel assignment (by IMO-Number)
+
+In order to request an account, please contact [service.macs3@navis.com](mailto:service.macs3@navis.com).
 
 ## Quick Start: Explore the services through RESTful APIs
 
