@@ -16,7 +16,7 @@ In order to request an account, please contact [api.macs3@navis.com](mailto:api.
 
 The service documentations are based on the OpenAPI specification (aka Swagger) and can best be explored by using a REST Client like Swagger or Postman.
 
-* Swagger is has got the benefit of being a combination of REST Client and built-in documentation right at your fingertips - so it's a good point to start.
+* Swagger has got the benefit of being a combination of REST Client and built-in "documentation right at your fingertips" - so it's a good point to start.
 * Postman is the most-used REST Client worldwide and gives you maximum flexibility and unlimited options. More experienced users may prefer to use Postman as REST Client and use the Swagger documentation just for reference.
 
 Have your API-Key ready and follow our [Swagger](swagger.md) or [Postman](postman.md) guide (Stability) for a quick start.
