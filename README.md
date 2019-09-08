@@ -2,7 +2,7 @@
 
 The MACS3 API Services enable users to perform cloud-based stability-, lashing-, dangerous cargo calculations and condition checks for vessels.
 
-You can easily integrate the services into your solutions by calling the RESTful APIs, so your application will make HTTP requests and parse the response. By default, the response format is JSON
+You can easily integrate the services into your digital infrastructure by calling the RESTful APIs, so your application will make HTTP requests and parse the response. By default, the response format is JSON
 
 ## Requirements
 
