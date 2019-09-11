@@ -41,4 +41,4 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   * https://api.dago.macs3.com
   * https://api.conditioncheck.macs3.com
 
-  Even when coding on another platform, see how to call the stablity service in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md), [C# DangerousGoods Sample](csharp_dago.md) and [C# Condition Check Sample](csharp_conditioncheck.md).
+  Even when coding on another platform, see how to call the services in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md), [C# DangerousGoods Sample](csharp_dago.md) and [C# Condition Check Sample](csharp_conditioncheck.md).
