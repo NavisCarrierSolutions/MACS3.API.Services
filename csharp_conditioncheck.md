@@ -5,7 +5,7 @@ This sampe shows how to quickly perform a cloudbased condition check using Micro
 * Open Visual Studio
 * Create a Console App (C#)
 
-## 2. Add the MACS3.Connected Stability SDK from nuget.org
+## 2. Add the MACS3.Connected Condition Check SDK from nuget.org
 * In Visual Studio select Tools > NuGet Package Manager > Package Manager Console menu command
 * Once the console opens, check that the Default project drop-down list shows the project into which you want to install the package.
 * Enter the command ```Install-Package MACS3.Connected.SDK.Stability```
@@ -20,6 +20,6 @@ SAMPLE
 
 In the above given sample, you just have to replace "YOUR-API-KEY" and YOUR-IMO-NUMBER with your specific data.
 
-If you run the above given sample and your request is valid (http-status-code equals 200), you may continue and inspect the details in ```result``` according to the technical documentation at https://api.stability.macs3.com.
+If you run the above given sample and your request is valid (http-status-code equals 200), you may continue and inspect the details in ```result``` according to the technical documentation at https://api.conditioncheck.macs3.com.
 
 [back](README.md)
