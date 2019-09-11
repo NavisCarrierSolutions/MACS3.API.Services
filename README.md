@@ -31,7 +31,7 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   MACS3.Connected.SDK.Lashing  
   MACS3.Connected.SDK.DangerousCargo  
   
-  Have your API-Key ready and see how to call the services in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md) and [C# DangerousGoods Sample](csharp_dago.md).
+  Have your API-Key ready and see how to call the services in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md), [C# DangerousGoods Sample](csharp_dago.md) and [C# Condition Check Sample](csharp_conditioncheck.md).
 
 * If you are coding on another platform e.g. JavaScript, Java, Objective C, Swift or C++, consider auto-generating the Client SDKs. The service documentations can be used as input by a variety of popular code-generators like [Swagger Codegen](https://swagger.io/tools/swagger-codegen) or [SwaggerHub](https://swagger.io/tools/swaggerhub) to generate Client SDKs. Please check out the documentation of your preferred code-generator for details. 
 
@@ -41,4 +41,4 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   * https://api.dago.macs3.com
   * https://api.conditioncheck.macs3.com
 
-  Even when coding on another platform, see how to call the stablity service in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md) and [C# DangerousGoods Sample](csharp_dago.md).
+  Even when coding on another platform, see how to call the stablity service in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md), [C# DangerousGoods Sample](csharp_dago.md) and [C# Condition Check Sample](csharp_conditioncheck.md).
