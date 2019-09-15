@@ -92,7 +92,7 @@ namespace LashingSample
                         // View the payload e.g. for Swagger/Postman
                         //var json = JsonConvert.SerializeObject(parameters);
 
-                        // Call the Lash Caluclation
+                        // Call the Lash Calculation
                         var result = await apiClient.PerformLashCalculationsAsync(imoNumber, parameters);
 
                         // Inspect result for further processing
