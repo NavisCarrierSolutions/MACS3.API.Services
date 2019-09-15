@@ -15,12 +15,12 @@ This sampe shows how to quickly perform a cloudbased calculation using Microsoft
 The full sample can be downloaded [here](samples)
 
 ```
-using MACS3.Connected.SDK.Core;
-using MACS3.Connected.SDK.Model;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using MACS3.Connected.SDK.Core;
+using Model = MACS3.Connected.SDK.Model;
 
-namespace MACS3.Connected.DangerousGoodsTest
+namespace DangerousGoodsSample
 {
     class Program
     {
@@ -28,106 +28,122 @@ namespace MACS3.Connected.DangerousGoodsTest
         {
             Task.Run(async () =>
             {
-                var provider = new ApiKeyProvider { ApiKey = "<YOUR-API-KEY>" };
-                
+                var apiKey = "<YOUR-API-KEY>";
+                var imoNumber = 1234567;
+                var provider = new ApiKeyProvider {ApiKey = apiKey};
+
                 using (var apiClient = await MACS3.Connected.SDK.DangerousGoods.API2.CreateClientAsync(provider))
                 {
                     try
                     {
-                        DaGoCheckParameters parameter = new DaGoCheckParameters();
+                        var parameter = new Model.DaGoCheckParameters();
 
-                        parameter.Settings = new DaGoSettingsParameter(
-                            amendmentNumber: 38,
-                            checkForSunlight: true,
-                            stowKeepCoolCargoAwayFromReefers: true,
-                            stowKeepCoolCargoAwayFromSun: true);
-
-                        parameter.Containers = new List<DaGoContainerParameter>
+                        // Specify some settings for the calculation
+                        parameter.Settings = new Model.DaGoSettingsParameter
                         {
-                            new DaGoContainerParameter
-                            (
-                                id: "11",
-                                containerId: "NCVS1234568",
-                                typeIsoCode: "42G0",
-                                grossWeight: 10.1,
-                                position: "020206",
-                                relativeVcg: 0.50,
-                                height: 2.591,
-                                length: 12.192,
-                                width: 2.438,
-                                openTop: false,
-                                liveReefer: false,
-                                empty: false,
-                                doorOrientationAft: false,
-                                foodStuff: false,
-                                sunExposed: false,
-                                dangerousGoods: new List<DangerousGoodParameter>
-                                {
-                                    new DangerousGoodParameter
-                                    (
-                                        un: 1234,
-                                        _class: "3",
-                                        packingGroup: 2,
-                                        subLabel: "",
-                                        subLabel2: "",
-                                        stowageCategory: "E",
-                                        technicalName: "",
-                                        flashpoint: -28,
-                                        limitedQuantity: false,
-                                        exceptedQuantity: false,
-                                        marinePollutant: false,
-                                        caa: false,
-                                        segregationGroup: ""
-                                    )
-                                }
-                            ),
-                            new DaGoContainerParameter
-                            (
-                                id: "12",
-                                containerId: "NCVS1234569",
-                                typeIsoCode: "42G0",
-                                grossWeight: 10.1,
-                                position: "020208",
-                                relativeVcg: 0.50,
-                                height: 2.591,
-                                length: 12.192,
-                                width: 2.438,
-                                openTop: false,
-                                liveReefer: false,
-                                empty: false,
-                                doorOrientationAft: false,
-                                setPoint: 0,
-                                foodStuff: false,
-                                sunExposed: false,
-                                dangerousGoods: new List<DangerousGoodParameter>
-                                {
-                                    new DangerousGoodParameter
-                                    (
-                                        un: 4,
-                                        _class: "1.1D",
-                                        packingGroup: 1,
-                                        subLabel: "",
-                                        subLabel2: "",
-                                        stowageCategory: "4",
-                                        technicalName: "",
-                                        limitedQuantity: false,
-                                        exceptedQuantity: false,
-                                        marinePollutant: false,
-                                        caa: false,
-                                        segregationGroup: ""
-                                    )
-                                }
-                            )
+                            AmendmentNumber = 38,
+                            CheckForSunlight = true,
+                            StowKeepCoolCargoAwayFromReefers = true,
+                            StowKeepCoolCargoAwayFromSun = true
                         };
 
-                        parameter.ContainerToCheck = new List<ContainerIdentifier>
+                        // Add two containers to the load - class 3 and 1.1d
+                        parameter.Containers = new List<Model.DaGoContainerParameter>
                         {
-                            new ContainerIdentifier(id: "11", containerId: "NCVS1234568", position: "020206")
+                            new Model.DaGoContainerParameter
+                            {
+                                Id= "11",
+                                ContainerId = "NCVS1234568",
+                                TypeIsoCode = "42G0",
+                                GrossWeight = 10.1,
+                                Position = "020206",
+                                RelativeVcg = 0.50,
+                                Height = 2.591,
+                                Length = 12.192,
+                                Width = 2.438,
+                                OpenTop = false,
+                                LiveReefer = false,
+                                Empty = false,
+                                DoorOrientationAft = false,
+                                FoodStuff = false,
+                                SunExposed = false,
+                                DangerousGoods = new List<Model.DangerousGoodParameter>
+                                {
+                                    new Model.DangerousGoodParameter
+                                    {
+                                        Un = 1234,
+                                        Class = "3",
+                                        PackingGroup = 2,
+                                        SubLabel = "",
+                                        SubLabel2 = "",
+                                        StowageCategory = "E",
+                                        TechnicalName = "",
+                                        Flashpoint = -28,
+                                        LimitedQuantity = false,
+                                        ExceptedQuantity = false,
+                                        MarinePollutant = false,
+                                        Caa = false,
+                                        SegregationGroup = ""
+                                    }
+                                }
+                            },
+                            new Model.DaGoContainerParameter
+                            {
+                                Id = "12",
+                                ContainerId = "NCVS1234569",
+                                TypeIsoCode = "42G0",
+                                GrossWeight = 10.1,
+                                Position = "020208",
+                                RelativeVcg = 0.50,
+                                Height = 2.591,
+                                Length = 12.192,
+                                Width = 2.438,
+                                OpenTop = false,
+                                LiveReefer = false,
+                                Empty = false,
+                                DoorOrientationAft = false,
+                                SetPoint = 0,
+                                FoodStuff = false,
+                                SunExposed = false,
+                                DangerousGoods = new List<Model.DangerousGoodParameter>
+                                {
+                                    new Model.DangerousGoodParameter
+                                    {
+                                        Un = 4,
+                                        Class = "1.1D",
+                                        PackingGroup = 1,
+                                        SubLabel = "",
+                                        SubLabel2 = "",
+                                        StowageCategory = "4",
+                                        TechnicalName = "",
+                                        LimitedQuantity = false,
+                                        ExceptedQuantity = false,
+                                        MarinePollutant = false,
+                                        Caa = false,
+                                        SegregationGroup = ""
+                                    }
+                                }
+                            }
                         };
 
-                        DaGoCheckResult result = await apiClient.PerformDangerousGoodsCheckAsync(YOUR-IMO-NUMBER, parameter);
+                        // Add a container to be checked
+                        parameter.ContainerToCheck = new List<Model.ContainerIdentifier>
+                        {
+                            new Model.ContainerIdentifier
+                            {
+                                Id = "11", ContainerId = "NCVS1234568", Position = "020206"
+                            }
+                        };
+
+                        // View the payload e.g. for Swagger/Postman
+                        //var json = JsonConvert.SerializeObject(parameters);
+
+                        // Call the DG Calculation
+                        var result = await apiClient.PerformDangerousGoodsCheckAsync(imoNumber, parameter);
+
+                        // Inspect result for further processing
                     }
-                    catch (ApiException e)
+                    catch (ApiException)
                     {
                     }
                 }
