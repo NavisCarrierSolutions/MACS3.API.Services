@@ -17,11 +17,10 @@ The full sample can be downloaded [here](samples)
 ```
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
-using Macs3.Connected;
-using Model = IO.Swagger.Model;
+using MACS3.Connected.SDK.Core;
+using Model = MACS3.Connected.SDK.Model;
 
-namespace MACS3.Connected.StabilityTest
+namespace StabilitySample
 {
     class Program
     {
@@ -29,60 +28,76 @@ namespace MACS3.Connected.StabilityTest
         {
             Task.Run(async () =>
             {
-                var provider = new ApiKeyProvider {ApiKey = "YOUR-API-KEY"};
+                var apiKey = "<YOUR-API-KEY>";
+                var imoNumber = 1234567;
+                var provider = new ApiKeyProvider { ApiKey = apiKey };
 
                 using (var apiClient = await MACS3.Connected.SDK.Stability.API2.CreateClientAsync(provider))
                 {
                     try
                     {
+                        // Query vessel parameters
+                        var availParameters = await apiClient.GetStabilityParametersAsync(imoNumber);
+
+                        // Prepare parameterblock for calling the Stability Calculation
                         var parameter = new Model.CalculationsParameter();
 
+                        // Add one container to the load
                         parameter.Containers = new List<Model.ContainerParameter>
                         {
-                            new Model.ContainerParameter(
-                                id: 1,
-                                position: "170182",
-                                typeIsoCode: "22G0",
-                                grossWeight: 14,
-                                containerId: "AAAU1234567"
-                            )
+                            new Model.ContainerParameter{
+                                Id = "1",
+                                Position = "170182",
+                                TypeIsoCode = "22G0",
+                                GrossWeight = 14,
+                                ContainerId = "AAAU1234567"
+                            }
                         };
 
+                        // Add one tank to the load
                         parameter.Tanks = new List<Model.TankParameter>
                         {
-                            new Model.TankParameter(name: "5DBP", density: 1.0250, percentageFilled: 50, maxFs: false)
+                            new Model.TankParameter
+                            {
+                                Name = "5DBP", Density = 1.0250, PercentageFilled = 50, MaxFs = false
+                            }
                         };
 
+                        // Add one constant to the load
                         parameter.Constants = new List<Model.ConstantParameter>
                         {
-                            new Model.ConstantParameter(
-                                name: "Deadweight constant",
-                                lcg: 79.27,
-                                tcg: 0,
-                                vcg: 7.65,
-                                wda: -4.6,
-                                wdf: 295.0,
-                                weight: 676.0
-                            )
+                            new Model.ConstantParameter{
+                                Name = "Deadweight constant",
+                                Lcg = 79.27,
+                                Tcg = 0,
+                                Vcg = 7.65,
+                                Wda = -4.6,
+                                Wdf = 295,
+                                Weight = 676
+                            }
                         };
 
-                        parameter.Calculate = new Model.WhatToCalculateParameter(
-                            stability: true,
-                            strength: false,
-                            tanks: true
-                        );
+                        // Specify what you want to be calculated
+                        parameter.Calculate = new Model.WhatToCalculateParameter
+                        {
+                            Stability = true,
+                            Strength = false,
+                            Tanks = true
+                        };
 
-                        parameter.Settings = new Model.SettingsParameter();
-                        
-                        var availParameters = await apiClient.GetStabilityParametersAsync(imoNumber);
-                        parameter.Settings.FreeboardMode = "Summer"; // see availParameters.FreeboardModes[];
-                        
-                        // generate json fo Swagger/Postman
-                        var json = JsonConvert.SerializeObject(parameter);
-                        
-                        var result = await apiClient.CalculateStabilityAsync(YOUR-IMO-NUMBER, parameter);
+                        // Fill in some vessel specific settings, here check e.g. availParameters.FreeboardModes[]
+                        parameter.Settings = new Model.SettingsParameter { };
+                        parameter.Settings.FreeboardMode = "Summer";
+
+                        // View the payload e.g. for Swagger/Postman
+                        // var json = JsonConvert.SerializeObject(parameter);
+
+                        // Call the Stability Caluclation
+                        var result = await apiClient.CalculateStabilityAsync(imoNumber, parameter);
+
+                        // Inspect result for further processing
                     }
-                    catch (ApiException e)
+                    catch (ApiException)
                     {
                     }
                 }
