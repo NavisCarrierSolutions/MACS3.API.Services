@@ -15,10 +15,10 @@ This sampe shows how to quickly perform a cloudbased calculation using Microsoft
 The full sample can be downloaded [here](samples)
 
 ```
-using MACS3.Connected.SDK.Core;
-using Newtonsoft.Json;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
+using MACS3.Connected.SDK.Core;
 using Model = MACS3.Connected.SDK.Model;
 
 namespace LashingSample
@@ -37,31 +37,67 @@ namespace LashingSample
                 {
                     try
                     {
+                        // Query vessel parameters
                         var lashParameters = await apiClient.GetDynamicLashParametersAsync(imoNumber);
                         var vesselSpeed = (double)lashParameters.Parameters.SingleOrDefault(o => o.ValueType == Model.ParameterInfo.ValueTypeEnum.SpeedInKnots).DefaultValue;
-                        
-                        var parameters = new Model.LashingParameters(new Model.DynamicParameters(
-                            gm: 5,
-                            draft: 10,
-                            vesselSpeed:  vesselSpeed /* 15.0 */,
-                            windSpeed: 40.0));
 
-                        parameters.Containers = new List<Model.ContainerParameter>
+                        // Prepare parameterblock for calling the Lash Calculation
+                        var parameters = new Model.LashingParameters
                         {
-                            new Model.ContainerParameter(id:"1", containerId:"AAAU1234568", typeIsoCode:"42G0", grossWeight:10.1, position:"020206", relativeVcg:0.50, height:2.591, length:12.192, width:2.438),
-                            new Model.ContainerParameter(id:"2", containerId:"AAAU1234569", typeIsoCode:"42G0", grossWeight:10.1, position:"020282", relativeVcg:0.50, height:2.591, length:12.192, width:2.438),
+                            Parameters = new Model.DynamicParameters
+                            {
+                                Gm = 5,
+                                Draft = 10,
+                                VesselSpeed = vesselSpeed /* 15.0*/,
+                                WindSpeed = 40.0
+                            }
                         };
 
+                        // Add two container to the load
+                        parameters.Containers = new List<Model.ContainerParameter>
+                        {
+                            new Model.ContainerParameter
+                            {
+                                Id = "1",
+                                ContainerId = "AAAU1234568",
+                                TypeIsoCode = "42G0",
+                                GrossWeight = 10.1,
+                                Position = "020206",
+                                RelativeVcg = 0.50,
+                                Height = 2.591,
+                                Length = 12.192,
+                                Width = 2.438
+                            },
+                            new Model.ContainerParameter
+                            {
+                                Id = "2",
+                                ContainerId = "AAAU1234569",
+                                TypeIsoCode = "42G0",
+                                GrossWeight = 10.1,
+                                Position = "020282",
+                                RelativeVcg = 0.50,
+                                Height = 2.591,
+                                Length = 12.192,
+                                Width = 2.438
+                            },
+                        };
+
+                        // Specify what needs to be calculated
                         parameters.Calculate = new Model.WhatToCalculateParameterLashing
                         {
                             LoadableWeights = true,
                             PlacedLashBars = true
                         };
 
-                        var json = JsonConvert.SerializeObject(parameters);
+                        // View the payload e.g. for Swagger/Postman
+                        //var json = JsonConvert.SerializeObject(parameters);
+
+                        // Call the Lash Caluclation
                         var result = await apiClient.PerformLashCalculationsAsync(imoNumber, parameters);
+
+                        // Inspect result for further processing
                     }
-                    catch (ApiException e)
+                    catch (ApiException)
                     {
                     }
                 }
