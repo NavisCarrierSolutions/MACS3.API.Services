@@ -6,7 +6,7 @@ You can easily integrate the services into your digital infrastructure by callin
 
 ## Status
 
-The status of the MACS3 API Services is always visible via the [Status-Site](https://status.navis-cvs.com/).
+If you wish to stay informed about downtimes or status changes of the MACS3 API Services, you may subscribe to our [Status-Page](https://status.navis-cvs.com/).
 
 ## Release-Notes
 
