@@ -4,7 +4,15 @@ The MACS3 API Services enable users to perform cloud-based stability-, lashing-,
 
 You can easily integrate the services into your digital infrastructure by calling the RESTful APIs, so your application will make HTTP requests and parse the response. By default, the response format is JSON
 
-## Requirements
+## Status
+
+The status of the MACS3 API Services is always visible via the [Status-Site](https://status.navis-cvs.com/).
+
+## Release-Notes
+
+If you wish to stay informed about the latest MACS3 API Service changes, you may subscribe to our [Release-Notes](https://releasenotes.api-services.navis-cvs.com).
+
+## Requirements to explore the services
 
 * Your personal company account
 * Your account related API-Key
@@ -43,7 +51,3 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   * https://api.conditioncheck.macs3.com
 
   Even when coding on another platform, see how to call the services in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md), [C# DangerousGoods Sample](csharp_dago.md) and [C# Condition Check Sample](csharp_conditioncheck.md).
-
-## What's next?
-
-If you wish to stay informed about the latest MACS3 API Service changes, you may subscribe to our [Release-Notes](https://releasenotes.api-services.navis-cvs.com).
