@@ -43,3 +43,7 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   * https://api.conditioncheck.macs3.com
 
   Even when coding on another platform, see how to call the services in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md), [C# DangerousGoods Sample](csharp_dago.md) and [C# Condition Check Sample](csharp_conditioncheck.md).
+
+## What's next?
+
+If you wish to stay informed about the latest MACS3 API Service changes, you may subscribe to our [Release-Notes](https://releasenotes.api-services.navis-cvs.com).
