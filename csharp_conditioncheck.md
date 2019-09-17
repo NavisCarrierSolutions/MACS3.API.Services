@@ -56,7 +56,7 @@ namespace ConditionCheckSample
                             {
                                 Id = "1",
                                 ContainerId = "ABCD1234567",
-                                Position = "020086", // 020084 is lowest
+                                Position = "020086", // 020084 is lowest tier
                                 TypeIsoCode = "45G0"
                             }
                         };
