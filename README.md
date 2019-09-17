@@ -30,6 +30,7 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
   MACS3.Connected.SDK.Stability  
   MACS3.Connected.SDK.Lashing  
   MACS3.Connected.SDK.DangerousCargo  
+  MACS3.Connected.SDK.ConditionCheck  
   
   Have your API-Key ready and see how to call the services in the [C# Stability Sample](csharp_stability.md), [C# Lashing Sample](csharp_lashing.md), [C# DangerousGoods Sample](csharp_dago.md) and [C# Condition Check Sample](csharp_conditioncheck.md).
 
