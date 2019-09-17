@@ -46,4 +46,4 @@ When it comes to integration, you should use Client SDKs to take the RESTful API
 
 ## What's next?
 
-If you wish to stay informed about the latest MACS3 API Service changes, you may subscribe to our [Release-Notes](https://releasenotes.api-services.navis-cvs.com){:target="_blank"}.
+If you wish to stay informed about the latest MACS3 API Service changes, you may subscribe to our [Release-Notes](https://releasenotes.api-services.navis-cvs.com).
