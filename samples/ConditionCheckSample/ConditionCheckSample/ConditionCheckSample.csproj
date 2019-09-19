@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -50,16 +50,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\MACS3.Connected.SDK.ConditionCheck\MACS3.Connected.SDK.ConditionCheck.csproj">
-      <Project>{250b67e5-dc03-4ca8-9caf-9b7e81b6e48e}</Project>
-      <Name>MACS3.Connected.SDK.ConditionCheck</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\..\..\Macs3.Connected.SDK.Core\MACS3.Connected.SDK.Core.csproj">
-      <Project>{6fab4bc0-f5a8-4fac-8af3-60a61f6e1a4a}</Project>
-      <Name>MACS3.Connected.SDK.Core</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
+    <PackageReference Include="MACS3.Connected.SDK.ConditionCheck">
+      <Version>1.1.4</Version>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json">
       <Version>12.0.2</Version>
     </PackageReference>
