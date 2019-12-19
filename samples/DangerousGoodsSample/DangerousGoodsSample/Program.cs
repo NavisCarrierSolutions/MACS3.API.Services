@@ -23,7 +23,7 @@ namespace DangerousGoodsSample
                         DaGoCheckParameters parameter = new DaGoCheckParameters();
 
                         parameter.Settings = new DaGoSettingsParameter(
-                            amendmentNumber: 38,
+                            amendmentNumber: 39,
                             checkForSunlight: true,
                             stowKeepCoolCargoAwayFromReefers: true,
                             stowKeepCoolCargoAwayFromSun: true);
