@@ -41,7 +41,7 @@ namespace DangerousGoodsSample
                         // Specify some settings for the calculation
                         parameter.Settings = new Model.DaGoSettingsParameter
                         {
-                            AmendmentNumber = 38,
+                            AmendmentNumber = 39,
                             CheckForSunlight = true,
                             StowKeepCoolCargoAwayFromReefers = true,
                             StowKeepCoolCargoAwayFromSun = true
